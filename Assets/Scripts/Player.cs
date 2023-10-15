@@ -34,16 +34,32 @@ public class Player : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
 
 
+    //Jayanam - Animator controller
+    private Animator animR;
 
+
+
+    void Start() {
+        animR = GetComponent<Animator>();
+    }
 
     void Update() {
         //horizontal stores -1 if moving left, 1 if moving right, 0 if no direction
         horizontal = Input.GetAxisRaw("Horizontal");
+        if (IsGrounded()) {
+            if (horizontal != 0f) {
+                animR.SetTrigger("startRun");        
+            }
+            else {
+                animR.SetTrigger("startIdle");
+            }
+        }
 
         //jumping. the longer jump button is held down, the bigger the jump is. jumpingPower is the max, 
         //jumps can be shorter than it with short presses.
         if (Input.GetButtonDown("Jump") && IsGrounded()) {
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, jumpingPower);
+            animR.SetTrigger("startJump");
         }
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) {
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
@@ -98,7 +114,7 @@ public class Player : MonoBehaviour
         // they wall slide and can wall jump
         if (IsWalled() && !IsGrounded() && horizontal != 0f) {
             isWallSliding = true;
-            //
+            animR.SetTrigger("startWallSlide");
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
         else {
