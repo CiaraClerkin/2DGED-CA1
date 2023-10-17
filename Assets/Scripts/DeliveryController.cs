@@ -17,6 +17,24 @@ public class DeliveryController : MonoBehaviour
         spawner = spawnerReference;
     }
 
+    // Trying to make deliveries go away when players touch them.
+    // Does not work.
+    // Errors suggest DeliveryController and DeliverySpawner may not be properly linked.
+    private void OnCollisionEnter2D(Collision2D other) {
+        Player player = other.gameObject.GetComponent<Player>();
+
+        if (player != null) {
+            Die();        
+        }
+    }
+
+    public void Die() {
+        if (spawner != null) {
+            spawner.DeliveryDied();
+        }
+        Destroy(gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {

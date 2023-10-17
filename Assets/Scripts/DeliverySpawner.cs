@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class DeliverySpawner : MonoBehaviour
 {
+
+    [SerializeField] private DeliveryController deliveryController;
     [SerializeField] private GameObject deliveryPrefab;
-    [SerializeField] private float spawnRate = 2f;
+    [SerializeField] private float spawnRate = 10f;
     [SerializeField] private Transform[] spawnPoints;
 
     [SerializeField] private int maxDeliveries = 2;
@@ -23,7 +25,7 @@ public class DeliverySpawner : MonoBehaviour
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         GameObject spawnedDelivery = Instantiate(deliveryPrefab, spawnPoint.position, Quaternion.identity);
 
-        DeliveryController deliveryController = spawnedDelivery.GetComponent<DeliveryController>();
+        deliveryController = spawnedDelivery.GetComponent<DeliveryController>();
         deliveryController.Initialize(this);
 
         currentDeliveries++;
