@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
     //Jayanam - Animator controller
     private Animator animR;
-
+    AudioManager audiM;
 
 
     void Start() {
@@ -44,11 +44,12 @@ public class Player : MonoBehaviour
     }
 
     void Update() {
+        //audiM.PlayFootstepSound(); 
         //horizontal stores -1 if moving left, 1 if moving right, 0 if no direction
         horizontal = Input.GetAxisRaw("Horizontal");
         if (IsGrounded()) {
             if (horizontal != 0f) {
-                animR.SetTrigger("startRun");        
+                animR.SetTrigger("startRun");       
             }
             else {
                 animR.SetTrigger("startIdle");
@@ -60,6 +61,8 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded()) {
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, jumpingPower);
             animR.SetTrigger("startJump");
+            audiM.instance.PlayJumpSound();
+
         }
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) {
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
