@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 805c14e8a6db10d468f9b2f034b0a01c
+guid: 05cd151585f952c4caa916b4947e17f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -480026947694649183
-    second: near-buildings-bg_0
-  - first:
-      213: 1523336376783092178
-    second: near-buildings-bg_1
-  - first:
-      213: -6699097580721481067
-    second: near-buildings-bg_2
-  - first:
-      213: 1789158833055147444
-    second: near-buildings-bg_3
-  - first:
-      213: 5039068060066335562
-    second: near-buildings-bg_4
+      213: 5131461394547859242
+    second: buildings-bg_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -49,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -83,7 +71,7 @@ TextureImporter:
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -166,138 +154,26 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: near-buildings-bg_0
+      name: buildings-bg_0
       rect:
         serializedVersion: 2
-        x: 13
+        x: 0
         y: 0
-        width: 72
-        height: 174
+        width: 144
+        height: 124
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -36, y: -87}
-        - {x: 28, y: -87}
-        - {x: 28, y: 67}
-        - {x: -36, y: 67}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a0ab0cc80a9659f0800000000000000
-      internalID: -480026947694649183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: near-buildings-bg_1
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 0
-        width: 79
-        height: 204
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2d9369b1d5af32510800000000000000
-      internalID: 1523336376783092178
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: near-buildings-bg_2
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 0
-        width: 103
-        height: 209
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 4, y: 0, z: 1, w: 41}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 59ada616e360803a0800000000000000
-      internalID: -6699097580721481067
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: near-buildings-bg_3
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 0
-        width: 95
-        height: 162
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 5, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 38.5, y: -24}
-        - {x: 38.5, y: 49}
-        - {x: -36.5, y: 49}
-        - {x: -36.5, y: -25}
-        - {x: -47.5, y: -25}
-        - {x: -47.5, y: -51}
-        - {x: -36.5, y: -51}
-        - {x: -36.5, y: -81}
-        - {x: 38.5, y: -81}
-        - {x: 38.5, y: -52}
-        - {x: 42.5, y: -52}
-        - {x: 42.5, y: -25}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b52103ba7e54d810800000000000000
-      internalID: 1789158833055147444
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: near-buildings-bg_4
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 0
-        width: 79
-        height: 174
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4b4547d3bd5ee540800000000000000
-      internalID: 5039068060066335562
+      spriteID: a2fd7a063fc963740800000000000000
+      internalID: 5131461394547859242
       vertices: []
       indices: 
       edges: []
@@ -305,19 +181,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a8af2761f323c874abb78a4ade26a138
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      near-buildings-bg_0: -480026947694649183
-      near-buildings-bg_1: 1523336376783092178
-      near-buildings-bg_2: -6699097580721481067
-      near-buildings-bg_3: 1789158833055147444
-      near-buildings-bg_4: 5039068060066335562
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

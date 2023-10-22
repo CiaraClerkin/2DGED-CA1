@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
 
     //Jayanam - Animator controller
     private Animator animR;
-    AudioManager audiM;
+    public AudioManager audiM;
 
 
     void Start() {
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded()) {
             rb.velocity = new UnityEngine.Vector2(rb.velocity.x, jumpingPower);
             animR.SetTrigger("startJump");
-            audiM.instance.PlayJumpSound();
+            audiM.PlayJumpSound();
 
         }
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) {
