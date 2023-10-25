@@ -14,8 +14,12 @@ public class DeliveryController : MonoBehaviour
         
     //}
 
-    public void Initialize(DeliverySpawnerScript spawnerReference) {
+    /*public void Initialize(DeliverySpawnerScript spawnerReference) {
         spawner = spawnerReference;
+    }*/
+
+    void Start() {
+        spawner = FindFirstObjectByType<DeliverySpawnerScript>();
     }
 
     // Trying to make deliveries go away when players touch them.

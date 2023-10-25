@@ -3,7 +3,11 @@ guid: 6b23e9d011b54a242a3ef101bd77be38
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - jumpClip: {fileID: 8300000, guid: 33764a6814a8d0049aff90840be3bf00, type: 3}
+  - wallClip: {instanceID: 0}
+  - footstepSound: {fileID: 8300000, guid: d1a6131d24a013747add8a7bc058303e, type: 3}
+  - backgroundMusic: {fileID: 8300000, guid: c7f7a2bd1da23c148b8e1184031d1615, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

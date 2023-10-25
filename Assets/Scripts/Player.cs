@@ -36,11 +36,13 @@ public class Player : MonoBehaviour
 
     //Jayanam - Animator controller
     private Animator animR;
-    public AudioManager audiM;
+    AudioManager audiM;
 
 
     void Start() {
         animR = GetComponent<Animator>();
+        audiM = FindFirstObjectByType<AudioManager>();
+        //audiM = GetComponent<AudioManager>();
     }
 
     void Update() {
@@ -49,7 +51,7 @@ public class Player : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         if (IsGrounded()) {
             if (horizontal != 0f) {
-                animR.SetTrigger("startRun");       
+                animR.SetTrigger("startRun");         
             }
             else {
                 animR.SetTrigger("startIdle");

@@ -11,6 +11,7 @@ public class DeliverySpawnerScript : MonoBehaviour
 
     [SerializeField] private int maxDeliveries = 2;
     private int currentDeliveries = 0;
+    DeliveryController deliveryController;
 
     void Start()
     {
@@ -24,7 +25,7 @@ public class DeliverySpawnerScript : MonoBehaviour
         Transform spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
         GameObject spawnedDelivery = Instantiate(deliveryPrefab, spawnPoint.position, Quaternion.identity);
 
-        DeliveryController deliveryController = spawnedDelivery.GetComponent<DeliveryController>();
+        deliveryController = spawnedDelivery.GetComponent<DeliveryController>();
         deliveryController.Initialize(this);
 
         currentDeliveries++;

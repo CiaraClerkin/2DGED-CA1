@@ -12,7 +12,6 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource soundEffectsSource;
     private AudioSource backgroundMusicSource;
-
     private AudioManager instance;
 
     // Start is called before the first frame update
@@ -32,7 +31,7 @@ public class AudioManager : MonoBehaviour
 
         backgroundMusicSource.clip = backgroundMusic;
         backgroundMusicSource.loop = true;
-        backgroundMusicSource.Play();
+        //backgroundMusicSource.Play();
     }
 
     public void PlayJumpSound() {
